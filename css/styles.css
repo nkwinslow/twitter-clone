@@ -20,6 +20,7 @@ body {
 }
 
 /* GLOBAL ELEMENTS */
+
 .avatar {
 	width: 32px;
 	height: 32px;
@@ -129,15 +130,18 @@ body {
 	}
 		#tweet-controls {
 			text-align: right;
+			display: none;
 		}
 			#tweet-controls div {
 				display: inline-block;
 			}
+
 			#char-count {
 				font-size: 14px;
 				color: #999;
 				text-shadow: 0 1px 1px rgba(255,255,255,.75);
 			}
+
 
 /* TWEET */
 .tweet {
@@ -147,6 +151,9 @@ body {
 	min-height: 60px;
 	border-radius: 6px;
 }
+	.tweet:hover .tweet-actions {
+		visibility: visible;
+	}
 
 	.tweet .avatar {
 		float: left;
@@ -168,6 +175,7 @@ body {
 
 	.tweet-actions {
 		text-align: right;
+		visibility: hidden;
 	}
 		.tweet-actions ul {
 			list-style-type: none;
@@ -211,6 +219,7 @@ body {
 	.stats {
 		margin: 12px 0 12px 42px;
 		border-top: 1px solid #e8e8e8;
+		display: none;
 	}
 		.stats, .stats div {
 			box-sizing: border-box;
@@ -252,11 +261,13 @@ body {
 			position: relative;
 			clear: both;
 			padding-left: 43px;
+			display: none;
 		}
-			.reply .avatar {
+		.reply .avatar {
 				position: absolute;
 				top: 0;
 				left: 0;
 			}
-
-
+		.hidden{
+				display: none;
+			}
